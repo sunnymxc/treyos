@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController; 
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,23 +16,6 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class, 'index']);
 
-Route::get('home', [HomeController::class, 'index']);
-
-Route::get('admin/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->middleware('role:admin');
-Route::get('agent/dashboard', [App\Http\Controllers\Agent\DashboardController::class, 'index'])->middleware('role:agent');
-Route::get('driver/dashboard', [App\Http\Controllers\Driver\DashboardController::class, 'index'])->middleware('role:driver');
-
-Route::get('about', function () {
-	return view('about');
-});
-
-Route::get('contact', function () {
-	return view('contact');
-});
-
-Route::get('services', function () {
-	return view('services');
-});
-
 Auth::routes();
 
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

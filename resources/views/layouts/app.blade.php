@@ -23,14 +23,6 @@
     <link href="{{ asset('vendor/remixicon/remixicon.css') }}" rel="stylesheet">
     <link href="{{ asset('vendor/owl.carousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
     <link href="{{ asset('vendor/aos/aos.css') }}" rel="stylesheet">
-    
-    <link href="{{ asset('argon') }}/img/brand/" rel="icon" type="image/png">
-    
-	<!-- Icons -->
-    <link href="{{ asset('argon') }}/vendor/nucleo/css/nucleo.css" rel="stylesheet">
-    <link href="{{ asset('argon') }}/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
-    <!-- Argon CSS -->
-    <link type="text/css" href="{{ asset('argon') }}/css/argon.css?v=1.0.0" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -88,8 +80,7 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->surname }}
-                                    {{ Auth::user()->other_name }}
+                                    {{ Auth::user()->name }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -109,15 +100,10 @@
                 </div>
             </div>
         </nav>
-        
-        @include('layouts.headers.guest')
 
         <main class="">
             @yield('content')
         </main>
-        
-        @include('layouts.footers.nav')
-        
     </div>
 
     <!-- Scripts -->
