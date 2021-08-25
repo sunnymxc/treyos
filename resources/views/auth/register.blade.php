@@ -1,9 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Register')
-
 @section('content')
-
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -15,6 +12,7 @@
                         @csrf
 
                         <div class="form-group row">
+<<<<<<< HEAD
                             <label for="surname" class="col-md-4 col-form-label text-md-right">{{ __('Surname') }}</label>
 
                             <div class="col-md-6">
@@ -29,17 +27,21 @@
 
 						 <div class="form-group row">
                             <label for="other_name" class="col-md-4 col-form-label text-md-right">{{ __('Other Name(s)') }}</label>
+=======
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+>>>>>>> 037a7665c6239cab23a50cd1e9449fa255819153
 
                             <div class="col-md-6">
-                                <input id="other_name" type="text" class="form-control @error('other_name') is-invalid @enderror" name="other_name" value="{{ old('other_name') }}" required autocomplete="other_name" autofocus>
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
-                                @error('other_name')
+                                @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
                         </div>
+<<<<<<< HEAD
                         
                  	<div class="form-group row">
                         	<label for="gender" class="col-md-4 col-form-label text-md-right">{{ __('Gender') }}</label>
@@ -107,8 +109,9 @@
 						    </div> 
 						</div>
 					</div>
+=======
+>>>>>>> 037a7665c6239cab23a50cd1e9449fa255819153
 
-						
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
@@ -144,6 +147,7 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
+<<<<<<< HEAD
                         
                         <div class="form-group row">
                         <label for="role" class="col-md-4 col-form-label text-md-right">{{ __('Join as') }}</label>
@@ -167,6 +171,8 @@
 						    </div>
 						</div> 
 					</div>
+=======
+>>>>>>> 037a7665c6239cab23a50cd1e9449fa255819153
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">

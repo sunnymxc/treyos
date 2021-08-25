@@ -3,9 +3,13 @@
 @section('title', 'Home')
 
 @section('content')
-
 <section id="hero">
 
+<<<<<<< HEAD
+<section id="hero">
+
+=======
+>>>>>>> 037a7665c6239cab23a50cd1e9449fa255819153
   <div class="container">
     <div class="row">
       <div class="col-lg-7 pt-5 pt-lg-0 order-2 order-lg-1 d-flex align-items-center">
@@ -337,5 +341,8 @@
   </section><!-- End Agents Section -->
 
 </main>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 037a7665c6239cab23a50cd1e9449fa255819153
 @endsection

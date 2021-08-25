@@ -12,21 +12,33 @@
     <!-- Favicon -->
     <link href="{{ asset('argon') }}/img/brand/" rel="icon" type="image/png">
 
+<<<<<<< HEAD
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+=======
+>>>>>>> 037a7665c6239cab23a50cd1e9449fa255819153
     
-	<!-- Icons -->
-    <link href="{{ asset('argon') }}/vendor/nucleo/css/nucleo.css" rel="stylesheet">
-    <link href="{{ asset('argon') }}/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
-    <!-- Argon CSS -->
-    <link type="text/css" href="{{ asset('argon') }}/css/argon.css?v=1.0.0" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/icofont/icofont.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/venobox/venobox.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/remixicon/remixicon.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/owl.carousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/aos/aos.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md  fixed-top d-flex align-items-center header-transparent" id="header">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    {{-- {{ config('app.name', 'Treyos Logo') }} --}}
+                    Treyos Logo
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -40,6 +52,26 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#features">Features</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#details">Services</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-success" href="#agents">Become an Agent</a>
+                        </li>
+
+
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
@@ -56,8 +88,7 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->surname }}
-                                    {{ Auth::user()->other_name }}
+                                    {{ Auth::user()->name }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -78,12 +109,28 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="">
             @yield('content')
         </main>
+<<<<<<< HEAD
         
         @include('layouts.footers.nav')    
     </div>
     @stack('scripts')    
+=======
+    </div>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('vendor/venobox/venobox.min.js') }}"></script>
+    <script src="{{ asset('vendor/waypoints/jquery.waypoints.min.js') }}"></script>
+    <script src="{{ asset('vendor/counterup/counterup.min.js') }}"></script>
+    <script src="{{ asset('vendor/owl.carousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('vendor/aos/aos.js') }}"></script>  
+    <script src="{{ asset('js/main.js') }}"></script>
+
+>>>>>>> 037a7665c6239cab23a50cd1e9449fa255819153
 </body>
+
+
 </html>
