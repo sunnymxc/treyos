@@ -1,0 +1,9 @@
+﻿.container{
+  width: 90px;
+  overflow: hidden;
+  border: 1px solid black;
+}
+.date{
+  width: 125px;
+  border: 0px none transparent;
+}

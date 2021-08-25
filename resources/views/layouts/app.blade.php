@@ -8,11 +8,12 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Treyos | @yield('title', 'Home')</title>
+    
+    <!-- Favicon -->
+    <link href="{{ asset('argon') }}/img/brand/" rel="icon" type="image/png">
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <link href="{{ asset('argon') }}/img/brand/" rel="icon" type="image/png">
     
 	<!-- Icons -->
     <link href="{{ asset('argon') }}/vendor/nucleo/css/nucleo.css" rel="stylesheet">
@@ -76,15 +77,13 @@
                 </div>
             </div>
         </nav>
-        
-        @include('layouts.headers.guest')
 
         <main class="py-4">
             @yield('content')
         </main>
         
-        @include('layouts.footers.nav')
-        
+        @include('layouts.footers.nav')    
     </div>
+    @stack('scripts')    
 </body>
 </html>

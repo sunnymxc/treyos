@@ -3,7 +3,7 @@
         <div class="header-body text-center mb-7">
             <div class="row justify-content-center">
                 <div class="col-lg-5 col-md-6">
-                    <h1 class="text-white">{{ __('Treyos Haulage Company.') }}</h1>
+                    <h1 class="text-white" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">{{ __('Treyos Haulage.') }}</h1>
                 </div>
             </div>
         </div>

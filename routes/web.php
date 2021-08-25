@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController; 
+use App\Http\Controllers\BookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,10 @@ Route::get('about', function () {
 	return view('about');
 });
 
+Route::get('blog', function () {
+	return view('blog');
+});
+
 Route::get('contact', function () {
 	return view('contact');
 });
@@ -35,4 +40,7 @@ Route::get('services', function () {
 });
 
 Auth::routes();
+
+Route::get('/book', [BookController::class, 'index']);
+Route::post('/book', [BookController::class, 'store']);
 

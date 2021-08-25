@@ -13,10 +13,13 @@
                 <a href="about" class="nav-link">About Us</a>
             </li>
             <li class="nav-item">
-                <a href="bookings" class="nav-link">Bookings</a>
+                <a href="book" class="nav-link">Bookings</a>
             </li>
             <li class="nav-item">
-                <a href="http://blog.creative-tim.com" class="nav-link">Blog</a>
+                <a href="services" class="nav-link">Services</a>
+            </li>
+            <li class="nav-item">
+                <a href="blog" class="nav-link">Blog</a>
             </li>
         </ul>
     </div>
