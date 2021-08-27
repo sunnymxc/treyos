@@ -1206,7 +1206,7 @@ section {
 }
 
 .pricing h4 {
-  font-size: 36px;
+  font-size: 30px;
   color: #1acc8d;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
@@ -1682,4 +1682,7 @@ a.nav-link{
   color: rgba(255, 255, 255, 0.7);
   font-weight: 600;
   /* padding: 10px 0 10px 25px!important; */
+}
+.bg-bluish{
+  background-color: rgba(34, 34, 72, 0.185);
 }
