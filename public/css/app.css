@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);
+﻿@import url(https://fonts.googleapis.com/css?family=Nunito);
 /* @charset "UTF-8"; */
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
@@ -465,7 +465,7 @@ mark,
   color: #6c757d;
 }
 .blockquote-footer::before {
-  content: "— ";
+  content: "â€”Â ";
 }
 
 .img-fluid {
@@ -541,6 +541,7 @@ pre code {
 .container-md,
 .container-sm {
   width: 100%;
+  padding-top:15px;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;

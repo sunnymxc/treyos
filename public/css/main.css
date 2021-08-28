@@ -1,4 +1,4 @@
-/**
+﻿/**
 * Template Name: Bootslander - v2.3.1
 * Template URL: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/
 * Author: BootstrapMade.com
@@ -1206,7 +1206,7 @@ section {
 }
 
 .pricing h4 {
-  font-size: 36px;
+  font-size: 30px;
   color: #1acc8d;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
@@ -1491,7 +1491,7 @@ section {
   padding: 10px 12px;
 }
 
-.contact .php-email-form button[type="submit"] {
+.contact .php-email-form button[type=submit] {
   background: #1acc8d;
   border: 0;
   padding: 10px 30px;
@@ -1500,7 +1500,7 @@ section {
   border-radius: 50px;
 }
 
-.contact .php-email-form button[type="submit"]:hover {
+.contact .php-email-form button[type=submit]:hover {
   background: #34e5a6;
 }
 
@@ -1634,13 +1634,13 @@ section {
   border-radius: 50px;
 }
 
-#footer .footer-top .footer-newsletter form input[type="email"] {
+#footer .footer-top .footer-newsletter form input[type=email] {
   border: 0;
   padding: 4px;
   width: calc(100% - 110px);
 }
 
-#footer .footer-top .footer-newsletter form input[type="submit"] {
+#footer .footer-top .footer-newsletter form input[type=submit] {
   position: absolute;
   top: 0;
   right: -2px;
@@ -1655,7 +1655,7 @@ section {
   border-radius: 50px;
 }
 
-#footer .footer-top .footer-newsletter form input[type="submit"]:hover {
+#footer .footer-top .footer-newsletter form input[type=submit]:hover {
   background: #149f6e;
 }
 
@@ -1682,4 +1682,7 @@ a.nav-link{
   color: rgba(255, 255, 255, 0.7);
   font-weight: 600;
   /* padding: 10px 0 10px 25px!important; */
+}
+.bg-bluish{
+  background-color: rgba(34, 34, 72, 0.185);
 }

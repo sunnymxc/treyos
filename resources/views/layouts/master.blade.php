@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Treyos | @yield('title', 'Home')</title>
+    <title>Treyos | @yield('title', 'Dashboard')</title>
     
     <!-- Favicon -->
     <link href="{{ asset('argon') }}/img/brand/" rel="icon" type="image/png">
@@ -42,15 +42,7 @@
                 <!-- Uncomment below if you prefer to use an image logo -->
                 <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
               </div>
-        
-              <nav class="nav-menu d-none d-lg-block">
-                <ul>
-                  <li class="active"><a href="/">Home</a></li>
-                  <li><a href="#about">About</a></li>
-                  <li><a href="#details">Services</a></li>
-                  <li><a href="#features">Features</a></li>
-                  <li><a class="" href="#agents">Become an Agent</a></li>
-                  
+                          
                    <!-- Authentication Links -->
                    @guest
                    @if (Route::has('login'))

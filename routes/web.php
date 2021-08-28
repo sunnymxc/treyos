@@ -1,12 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-<<<<<<< HEAD
 use App\Http\Controllers\HomeController; 
-use App\Http\Controllers\BookController;
-=======
-use App\Http\Controllers\HomeController;
->>>>>>> 037a7665c6239cab23a50cd1e9449fa255819153
+use App\Http\Controllers\BookingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,36 +17,21 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class, 'index']);
 
-<<<<<<< HEAD
 Route::get('home', [HomeController::class, 'index']);
 
-Route::get('admin/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->middleware('role:admin');
-Route::get('agent/dashboard', [App\Http\Controllers\Agent\DashboardController::class, 'index'])->middleware('role:agent');
-Route::get('driver/dashboard', [App\Http\Controllers\Driver\DashboardController::class, 'index'])->middleware('role:driver');
+Route::get('/admin/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->middleware('role:crown');
+Route::get('/agent/dashboard', [App\Http\Controllers\Agent\DashboardController::class, 'index'])->middleware('role:agent');
+Route::get('/driver/dashboard', [App\Http\Controllers\Driver\DashboardController::class, 'index'])->middleware('role:driver');
 
-Route::get('about', function () {
-	return view('about');
-});
 
-Route::get('blog', function () {
-	return view('blog');
-});
-
-Route::get('contact', function () {
-	return view('contact');
-});
-
-Route::get('services', function () {
-	return view('services');
-});
 
 Auth::routes();
 
-Route::get('/book', [BookController::class, 'index']);
-Route::post('/book', [BookController::class, 'store']);
-
-=======
-Auth::routes();
+Route::get('booking', [BookingController::class, 'index']);
+Route::post('booking', [BookingController::class, 'store']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
->>>>>>> 037a7665c6239cab23a50cd1e9449fa255819153
+
+Route::get('/booking', [BookingController::class, 'create']);
+Route::post('/booking', [BookingController::class, 'store']);
+

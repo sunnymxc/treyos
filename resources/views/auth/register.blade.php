@@ -12,27 +12,10 @@
                         @csrf
 
                         <div class="form-group row">
-<<<<<<< HEAD
-                            <label for="surname" class="col-md-4 col-form-label text-md-right">{{ __('Surname') }}</label>
+                            <label for="surname" class="col-md-4 col-form-label text-md-right">{{ __('First Name') }}</label>
 
                             <div class="col-md-6">
                                 <input id="surname" type="text" class="form-control @error('surname') is-invalid @enderror" name="surname" value="{{ old('surname') }}" required autocomplete="surname" autofocus>
-                                @error('surname')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-						 <div class="form-group row">
-                            <label for="other_name" class="col-md-4 col-form-label text-md-right">{{ __('Other Name(s)') }}</label>
-=======
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
->>>>>>> 037a7665c6239cab23a50cd1e9449fa255819153
-
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -41,83 +24,54 @@
                                 @enderror
                             </div>
                         </div>
-<<<<<<< HEAD
                         
-                 	<div class="form-group row">
+                        <div class="form-group row">
+                            <label for="other_name" class="col-md-4 col-form-label text-md-right">{{ __('Last Name') }}</label>
+                            <div class="col-md-6">
+                                <input id="other_name" type="text" class="form-control @error('other_name') is-invalid @enderror" name="other_name" value="{{ old('other_name') }}" required autocomplete="name" autofocus>
+                                @error('other_name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        
+                        <div class="form-group row">
                         	<label for="gender" class="col-md-4 col-form-label text-md-right">{{ __('Gender') }}</label>
-                        	<div class="col-md-4">	 
-							    <div class="input-group "> 
-							        <div class="form-radio col-md-6"> 
-							            <label class="form-check-label"> 
-							                <input type="radio" autofocus class="form-control @error('gender') is-invalid @enderror" name="gender" value="Male"> Male 
-							            </label> 
-							        </div> 
-							        <div class="form-radio col-sm"> 
-							            <label class="form-check-label"> 
-							                <input type="radio" autofocus class="form-control @error('gender') is-invalid @enderror" name="gender" value="Female"> Female 
-							            </label> 
-							        </div> 
-							        @error('gender') 
-							            <span class="invalid-feedback" role="alert"> 
-							                <strong>{{ $message }}</strong> 
-							            </span> 
-							        @enderror 
-							    	</div>
-							</div> 
-					</div>
-					 
-					<div class="form-group row">
-						<label for="dob" class="col-md-4 col-form-label text-md-right">{{ __('Date of Birth') }}</label>
- 						<div class="col-md-6">
-						    <div class="input-group"> 
-						        <input id="datepicker" type="date" 
-						            class="date form-control @error('dob') is-invalid @enderror" name="dob" 
-						            value="{{ old('dob') }}" required autofocus 
-						            placeholder="Date of Birth"> 
-						        <div class="input-group-append"> 
-						            <span class="input-group-text"> 
-						                <i class="mdi mdi-check-circle-outline"></i> 
-						            </span> 
-						        </div> 
-						        @error('dob') 
-						            <span class="invalid-feedback" role="alert"> 
-						                <strong>{{ $message }}</strong> 
-						            </span> 
-						        @enderror 
-						    </div>
-						</div> 
-					</div>
-					 
-					<div class="form-group row"> 
-						<label for="phone" class="col-md-4 col-form-label text-md-right">{{ __('Phone Number') }}</label>
-						<div class="col-md-6">
-						    <div class="input-group"> 
-						        <input id="phone" type="text" 
-						            class="form-control @error('phone') is-invalid @enderror" name="phone" 
-						            value="{{ old('phone') }}" required autocomplete="phone" autofocus 
-						            placeholder="Phone Number"> 
-						        <div class="input-group-append"> 
-						            <span class="input-group-text"> 
-						                <i class="mdi mdi-check-circle-outline"></i> 
-						            </span> 
-						        </div> 
-						        @error('phone') 
-						            <span class="invalid-feedback" role="alert"> 
-						                <strong>{{ $message }}</strong> 
-						            </span> 
-						        @enderror 
-						    </div> 
-						</div>
-					</div>
-=======
->>>>>>> 037a7665c6239cab23a50cd1e9449fa255819153
+                        	<div class="col-md-6">
+                            	<div class="input-group form-check">
+	                            	<div class="col-sm">
+	                            		<input id="gender" type="radio" class="form-control @error('gender') is-invalid @enderror" name="gender" value="Male"> Male
+	                            	</div>
+                            		<div class="col-sm">
+	                            		<input id="gender" type="radio" class="form-control @error('gender') is-invalid @enderror" name="gender" value="Female"> Female
+	                            	</div>
+	                            </div>
+	                            @error('gender')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        
+                        <div class="form-group row">
+                        	<label for="dob" class="col-md-4 col-form-label text-md-right">{{ __('Date of Birth') }}</label>
+                        	<div class="col-md-4">
+                        		<input id="dob" type="date" class="form-control @error('dob') is-invalid @enderror" name="dob" value="{{ old('dob') }}" required>
+                        		@error('dob')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                        	</div>
+                        </div>
 
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -141,38 +95,32 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                            <label for="password-confirmation" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                <input id="password-confirmation" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
-<<<<<<< HEAD
                         
                         <div class="form-group row">
-                        <label for="role" class="col-md-4 col-form-label text-md-right">{{ __('Join as') }}</label>
-                        <div class="col-md-4">
-						    <div class="input-group"> 
-						        <div class="form-radio col-sm"> 
-						            <label class="form-check-label"> 
-						                <input type="radio" autofocus class="form-control @error('role') is-invalid @enderror" name="role" value="agent"> Agent 
-						            </label> 
-						        </div> 
-						        <div class="form-radio col-sm"> 
-						            <label class="form-check-label"> 
-						                <input type="radio" autofocus class="form-control @error('role') is-invalid @enderror" name="role" value="driver"> Driver
-						            </label> 
-						        </div> 
-						        @error('role') 
-						            <span class="invalid-feedback" role="alert"> 
-						                <strong>{{ $message }}</strong> 
-						            </span> 
-						        @enderror 
-						    </div>
-						</div> 
-					</div>
-=======
->>>>>>> 037a7665c6239cab23a50cd1e9449fa255819153
+                        	<label for="role" class="col-md-4 col-form-label text-md-right">{{ __('Join as') }}</label>
+                        	<div class="col-md-6">
+                            	<div class="input-group form-check">
+	                            	<div class="col-sm">
+	                            		<input id="role" type="radio" class="form-control @error('gender') is-invalid @enderror" name="role" value="agent"> Agent
+	                            	</div>
+                            		<div class="col-sm">
+	                            		<input id="role" type="radio" class="form-control @error('gender') is-invalid @enderror" name="role" value="driver"> Driver
+	                            	</div>
+	                            </div>
+	                            @error('gender')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
@@ -180,6 +128,9 @@
                                     {{ __('Register') }}
                                 </button>
                             </div>
+                            @foreach($errors->all() as $error)
+   								{{ $error  }}
+							@endforeach
                         </div>
                     </form>
                 </div>

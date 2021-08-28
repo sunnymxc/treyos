@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Book extends Model
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasFactory, Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -15,11 +15,16 @@ class Book extends Model
      * @var array
      */
     protected $fillable = [
-        'from',
-        'to'
-        'goods',
-        'dom',
-        'tom',
+        'name',
+        'email',
+        ''
+        'state_to',
+        'address_to',
+        
+        'state_from',
+        'address_from',
+        
+        'vehicle'
     ];
 
 }

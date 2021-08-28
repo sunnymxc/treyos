@@ -14,7 +14,7 @@ class CreateBookingRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+    	return true;  
     }
 
     /**
@@ -25,7 +25,18 @@ class CreateBookingRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+        	'state_to' => 'required|string', 
+        	'lga_to' => 'required|string',
+        	'address_to' => 'required|max:255|text',
+        	
+        	'state_from' => 'required|string',
+        	'lga_from' => 'required|string',
+        	'address_from' => 'required|max:255|text',
+        	
+        	'vehicle' => 'required|string',
+        	'goods' => 'required|string',
+        	'dom' => 'required|string',
+        	'description' => 'max:1000',
         ];
     }
 }

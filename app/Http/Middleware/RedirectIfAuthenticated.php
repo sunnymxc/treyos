@@ -19,14 +19,23 @@ class RedirectIfAuthenticated
      */
     public function handle(Request $request, Closure $next, ...$guards)
     {
-        $guards = empty($guards) ? [null] : $guards;
-
-        foreach ($guards as $guard) {
-            if (Auth::guard($guard)->check()) {
-                return redirect(RouteServiceProvider::HOME);
-            }
-        }
-
-        return $next($request);
+	    if (Auth::guard($guards)->check()) {
+	        $role = (Auth::user()->role);
+	        switch ($role) {
+	            case 'crown':
+	            	return redirect('/admin/dashboard');
+	                break;
+	            case 'agent':
+	                return redirect('/agent/dashboard');
+	                break;
+	            case 'driver':
+	                return redirect('/driver/dashboard');
+	                break;
+	            default:
+	                return redirect('/login');
+	                break;	
+	        }
+		}
+		return $next($request);
     }
 }
