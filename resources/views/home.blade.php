@@ -98,7 +98,7 @@
         <p>
           Voluptas nisi in quia excepturi nihil voluptas nam et ut. Expedita omnis eum consequatur non. Sed in asperiores aut repellendus. Error quisquam ab maiores. Quibusdam sit in officia
         </p>
-        <a href="/booking" class="btn btn-success mt-3 px-4">Book Us</a>
+        <a href="{{ url('booking') }}" class="btn btn-success mt-3 px-4">Book Us</a>
 
       </div>
     </div>
@@ -121,7 +121,7 @@
         <p>
           Inventore id enim dolor dicta qui et magni molestiae. Mollitia optio officia illum ut cupiditate eos autem. Soluta dolorum repellendus repellat amet autem rerum illum in. Quibusdam occaecati est nisi esse. Saepe aut dignissimos distinctio id enim.
         </p>
-        <a href="/booking" class="btn btn-success mt-3 px-4">Book Us</a>
+        <a href="{{ url('booking') }}" class="btn btn-success mt-3 px-4">Book Us</a>
 
       </div>
     </div>
@@ -140,7 +140,7 @@
         <p>
           Suscipit enim et. Ut optio esse quidem quam reiciendis esse odit excepturi. Vel dolores rerum soluta explicabo vel fugiat eum non.
         </p>
-        <a href="/booking" class="btn btn-success mt-3 px-4">Book Us</a>
+        <a href="{{ url('booking') }}" class="btn btn-success mt-3 px-4">Book Us</a>
 
       </div>
     </div>
