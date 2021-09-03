@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Booking;
-use App\Http\Requests\CreateBookingRequest;
 use Illuminate\Http\Request;
 
 class BookingController extends Controller
@@ -13,7 +11,11 @@ class BookingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
- 
+    public function index()
+    {
+        return view('booking');
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -21,7 +23,7 @@ class BookingController extends Controller
      */
     public function create()
     {
-        return view('booking');
+        //
     }
 
     /**
@@ -32,9 +34,7 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
-        $booking = new Booking;
-        $booking->$request->only(['name', 'email', 'phone', 'state_to', 'address_to', 'state_from', 'address_from', 'vehicle']);        
-        $booking->save();
+        //
     }
 
     /**

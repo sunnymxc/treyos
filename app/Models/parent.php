@@ -5,26 +5,30 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Book extends Model
+class parent extends Model
 {
-    use HasFactory, Notifiable;
-
+    use HasFactory;
+    
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name',
+        'surname',
+        'other_names',
         'email',
-        ''
-        'state_to',
-        'address_to',
+        'phone',
+        'address',
+    ];
+
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
         
-        'state_from',
-        'address_from',
-        
-        'vehicle'
     ];
 
 }

@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Treyos | @yield('title', 'Dashboard')</title>
+    <title>Treyos | @yield('title', 'Home')</title>
     
     <!-- Favicon -->
     <link href="{{ asset('argon') }}/img/brand/" rel="icon" type="image/png">
@@ -28,6 +28,8 @@
     <link href="{{ asset('vendor/remixicon/remixicon.css') }}" rel="stylesheet">
     <link href="{{ asset('vendor/owl.carousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
     <link href="{{ asset('vendor/aos/aos.css') }}" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 </head>
 <body>
     <div id="app">
@@ -42,28 +44,38 @@
                 <!-- Uncomment below if you prefer to use an image logo -->
                 <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
               </div>
-                          
+        
+              <nav class="nav-menu d-none d-lg-block">
+                <ul>
+                  <li class="active"><a href="/">Home</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#details">Services</a></li>
+                  <li><a href="#features">Features</a></li>
+                  <li><a class="" href="#agents">Become an Agent</a></li>
+                  
                    <!-- Authentication Links -->
                    @guest
                    @if (Route::has('login'))
                        <li class="nav-item">
-                           <a class="" href="">{{ __('Login') }}</a>
+                           <a class="" href="{{ route('login') }}">{{ __('Login') }}</a>
                        </li>
                    @endif
 
                    @if (Route::has('register'))
                        <li class="nav-item">
-                           <a class="" href="">{{ __('Register') }}</a>
+                           <a class="" href="{{ route('register') }}">{{ __('Register') }}</a>
                        </li>
                    @endif
                @else
                    <li class="nav-item dropdown">
-                       <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                           {{ Auth::user()->surname }}
-                           {{ Auth::user()->other_name }}
+                       <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#logout-form" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                           {{ Auth::user()->first_name }}
+                           {{ Auth::user()->last_name }}
                        </a>
+                       
+                       <a href="{{ url('/logout') }}"> logout </a>
 
-                       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                            <a class="dropdown-item" href="{{ route('logout') }}"
                               onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">

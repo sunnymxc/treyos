@@ -19,19 +19,27 @@ Route::get('/', [HomeController::class, 'index']);
 
 Route::get('home', [HomeController::class, 'index']);
 
-Route::get('/admin/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->middleware('role:crown');
-Route::get('/agent/dashboard', [App\Http\Controllers\Agent\DashboardController::class, 'index'])->middleware('role:agent');
-Route::get('/driver/dashboard', [App\Http\Controllers\Driver\DashboardController::class, 'index'])->middleware('role:driver');
-
-
-
+// handles routing logic
 Auth::routes();
+Route::get('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout']);
 
 Route::get('booking', [BookingController::class, 'index']);
 Route::post('booking', [BookingController::class, 'store']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/booking', [BookingController::class, 'create']);
-Route::post('/booking', [BookingController::class, 'store']);
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function() {
+    return view('dashboard');
+})->name('dashboard');
 
+Route::group(['middleware' =>'auth'], function() {
+	Route::group(['middleware' => 'role:agent', 'prefix' => 'agent', 'as' => 'agent.'], function() {
+		Route::resource('dashboard', App\Http\Controllers\Agents\DashboardController::class);
+	});
+	Route::group(['middleware' => 'role:driver', 'prefix' => 'driver', 'as' => 'driver.'], function() {
+		Route::resource('dashboard', App\Http\Controllers\Drivers\DashboardController::class);
+	});
+	Route::group(['middleware' => 'role:admin', 'prefix' => 'admin', 'as' => 'admin.'], function() {
+		Route::resource('dashboard', App\Http\Controllers\Admin\DashboardController::class);
+	});
+});

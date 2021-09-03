@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -31,24 +31,16 @@ class LoginController extends Controller
     
     public function redirectTo()
     {
-        $role = (Auth::user()->role);
-        switch ($role) {
-            case 'crown':
-            	return redirect('/admin/dashboard');
-                break;
-            case 'agent':
-                return redirect('/agent/dashboard');
-                break;
-            case 'driver':
-                return redirect('/driver/dashboard');
-                break;
-            default:
-                return redirect('/login');
-                break;		
-        }
+	    if (Auth::user()->role == 92782) {
+	    	return 'admin/dashboard';  // admin dashboard path
+	  	} elseif (Auth::user()->role == 2) {
+	    	return 'agent/dashboard';  // agent dashboard path
+	  	} elseif (Auth::user()->role == 3) { // driver dashboard path
+	  		return 'driver/dashboard';
+	  	} else {
+	  		abort(404);
+	  	}
 	}
-         
-        // return $next($request);
 
     /**
      * Create a new controller instance.
@@ -59,4 +51,12 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+    
+    public function logout() 
+    {
+    //logout user
+    auth()->logout();
+    // redirect to homepage
+    return redirect('/');
+	}
 }

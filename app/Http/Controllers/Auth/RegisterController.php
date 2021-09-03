@@ -8,7 +8,6 @@ use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\Auth;
 
 class RegisterController extends Controller
 {
@@ -30,26 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo;
-    
-    public function redirectTo()
-    {
-        $role = (Auth::user()->role);
-        switch ($role) {
-            case 'crown':
-            	return redirect('/admin/dashboard');
-                break;
-            case 'agent':
-                return redirect('/agent/dashboard');
-                break;
-            case 'driver':
-                return redirect('/driver/dashboard');
-                break;
-            default:
-                return redirect('/login');
-                break;		
-        }
-	}
+    protected $redirectTo = RouteServiceProvider::HOME;
 
     /**
      * Create a new controller instance.
@@ -70,11 +50,9 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'surname' => ['required', 'string', 'max:255'],
-            'other_name' => ['required', 'string', 'max:255'],
-            'gender' => ['required', 'string'],
-            'dob' => ['required'],
-            'role' => ['required', 'string', 'max:255'],
+            'first_name' => ['required', 'string', 'max:255'],
+            'last_name' => ['required', 'string', 'max:255'],
+            'role' => ['required', 'integer',],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -89,11 +67,9 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'surname' => $data['surname'],
-            'other_name' => $data['other_name'],
-            'gender' => $data['gender'],
-            'dob' => $data['dob'],
-            'role'=> $data['role'],
+        	'first_name' => $data['first_name'],
+            'last_name' => $data['last_name'],
+            'role' => $data['role'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
