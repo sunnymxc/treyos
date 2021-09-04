@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\CreateBookingRequest;
+use App\Models\Booking;
 
 class BookingController extends Controller
 {
@@ -34,7 +36,19 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $booking = new booking();
+      	$booking->name = $request->input('name');
+      	$booking->email = $request->input('email');
+      	$booking->phone = $request->input('phone');
+      	$booking->state_to = $request->input('state_to');
+      	$booking->address_to = $request->input('address_to');
+      	$booking->state_from = $request->input('state_from');
+      	$booking->address_from = $request->input('address_from');
+       	$booking->vehicle = $request->input('vehicle');
+       	
+       	$booking->save();
+       	
+       	return back()->withInput();
     }
 
     /**
@@ -43,7 +57,7 @@ class BookingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(booking $booking)
     {
         //
     }

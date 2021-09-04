@@ -305,7 +305,7 @@
                   <li>Pharetra massa</li>
                 </ul>
                 <div class="btn-wrap">
-                  <a href="#" class="btn-buy">Register Now</a>
+                  <a href="{{ route('register') }}" class="btn-buy">Register Now</a>
                 </div>
               </div>
             </div>
@@ -335,7 +335,7 @@
 
                 </ul>
                 <div class="btn-wrap">
-                  <a href="#" class="btn-buy">Register Now</a>
+                  <a href="{{ route('register') }}" class="btn-buy">Register Now</a>
                 </div>
               </div>
             </div>

@@ -47,7 +47,7 @@
         
               <nav class="nav-menu d-none d-lg-block">
                 <ul>
-                  <li class="active"><a href="/">Home</a></li>
+                  <li class="active"><a href="{{ url('home') }}">Home</a></li>
                   <li><a href="#about">About</a></li>
                   <li><a href="#details">Services</a></li>
                   <li><a href="#features">Features</a></li>
@@ -130,7 +130,7 @@
           <div class="col-lg-2 col-md-6 footer-links ">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="/">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ url('home') }}">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#details">Services</a></li>
               {{-- <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li> --}}

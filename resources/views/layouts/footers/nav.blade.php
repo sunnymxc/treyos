@@ -4,7 +4,7 @@
             &copy; {{ now()->year }} <a href="https://treyos.com" class="font-weight-bold ml-1" target="_blank">TREYOS COMPANY&trade;</a>
         </div>
     </div>
-    <div class="col-xl-6">
+    <div class="col-xl-6" style="font:menu">
         <ul class="nav nav-footer justify-content-center justify-content-xl-end">
             <li class="nav-item">
                 <a href="home" class="nav-link">Home</a>

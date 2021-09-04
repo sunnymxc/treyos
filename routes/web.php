@@ -19,14 +19,11 @@ Route::get('/', [HomeController::class, 'index']);
 
 Route::get('home', [HomeController::class, 'index']);
 
-// handles routing logic
+// Handles Routing Logic
 Auth::routes();
 Route::get('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout']);
 
-Route::get('booking', [BookingController::class, 'index']);
-Route::post('booking', [BookingController::class, 'store']);
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('booking', BookingController::class);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function() {
     return view('dashboard');
@@ -43,3 +40,7 @@ Route::group(['middleware' =>'auth'], function() {
 		Route::resource('dashboard', App\Http\Controllers\Admin\DashboardController::class);
 	});
 });
+
+// Paystack Testing
+Route::post('/pay', [App\Http\Controllers\PaymentController::class, 'redirectToGateway'])->name('pay');
+Route::get('/payment/callback', [App\Http\Controllers\PaymentController::class, 'handleGatewayCallback']);
