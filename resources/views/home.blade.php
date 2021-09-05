@@ -15,7 +15,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="300">
+      <div class="col-lg-5 order-1 order-lg-2 hero-img d-none d-md-block" data-aos="zoom-out" data-aos-delay="300">
         <img src="{{ asset('img/hero-img.png') }}" class="img-fluid animated" alt="">
       </div>
     </div>
@@ -45,7 +45,7 @@
   <div class="container-fluid">
 
     <div class="row">
-      <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
+      <div class="col-xl-5 col-lg-6 video-box d-md-flex justify-content-center align-items-stretch d-sm-none d-none d-md-block" data-aos="fade-right">
         <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
       </div>
 
@@ -53,7 +53,7 @@
         <h3>Everything You need to Know About Treyos</h3>
         <p>Esse voluptas cumque vel exercitationem. Reiciendis est hic accusamus. Non ipsam et sed minima temporibus laudantium. Soluta voluptate sed facere corporis dolores excepturi. Libero laboriosam sint et id nulla tenetur. Suscipit aut voluptate.</p>
 
-        <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
+        {{-- <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
           <div class="icon"><i class="bx bx-fingerprint"></i></div>
           <h4 class="title"><a href="">Lorem Ipsum</a></h4>
           <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
@@ -69,7 +69,7 @@
           <div class="icon"><i class="bx bx-atom"></i></div>
           <h4 class="title"><a href="">Dine Pad</a></h4>
           <p class="description">Explicabo est voluptatum asperiores consequatur magnam. Et veritatis odit. Sunt aut deserunt minus aut eligendi omnis</p>
-        </div>
+        </div> --}}
 
       </div>
     </div>
@@ -234,11 +234,15 @@
       </div>
     </div> --}}
 
+    <div class="col-xl-5 col-lg-6 video-box d-md-flex justify-content-center align-items-stretch d-block d-md-none" data-aos="fade-right">
+      <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+    </div>
+
   </div>
 </section><!-- End Features Section -->
 
 <!-- ======= Counts Section ======= -->
-<section id="counts" class="counts">
+{{-- <section id="counts" class="counts">
   <div class="container">
 
     <div class="row" data-aos="fade-up">
@@ -267,18 +271,12 @@
         </div>
       </div>
 
-      {{-- <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-        <div class="count-box">
-          <i class="icofont-users-alt-5"></i>
-          <span data-toggle="counter-up">15</span>
-          <p>Workers</p>
-        </div>
-      </div> --}}
-
+      
     </div>
 
   </div>
-</section><!-- End Counts Section -->
+</section> --}}
+<!-- End Counts Section -->
 
 
   <!-- ======= Agent Section ======= -->

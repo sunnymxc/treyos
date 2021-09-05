@@ -8,13 +8,13 @@
 
 <section class="book" id="hero">
 	<div class="container">
+		<form method="post" action="{{ route('booking.store') }}">
+			@csrf
     	<div class="row my-5">
       		<div class="col-md-8">
-        		<div class="card card-body bg-bluish shadow-sm border-0 p-5">
-          			<form method="post" action="{{ route('booking.store') }}">
-          				@csrf
+        		<div class="card card-body bg-bluish shadow-sm border-0 px-md-5 pt-3">
           				
-            			<h2 class="mb-3 text-black">Personal Details</h2>
+            			<h3 class="mb-3 text-black">Personal Details</h3>
             			<div class="form-row">
               				<div class="form-group col-md-12">
                 				<label for="name" class="text-black">Full Name</label>
@@ -66,6 +66,8 @@
 			                	</select>
 			              	</div>
 			           </div>
+						</div>
+					</div>
             		            		          			
 					   <div class="col-md-4 mt-3 mt-md-0">
 					   		<div class="card bg-bluish shadow-sm border-0">
