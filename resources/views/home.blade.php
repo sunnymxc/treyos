@@ -280,7 +280,7 @@
 
 
   <!-- ======= Agent Section ======= -->
-  <section id="agents" class="pricing">
+  {{-- <section id="agents" class="pricing">
     <div class="container">
       <div class="row">
         <div class="col-md-6 h-100">
@@ -346,7 +346,8 @@
 
      
     </div>
-  </section><!-- End Agents Section -->
+  </section> --}}
+  <!-- End Agents Section -->
 
 </main>
 
