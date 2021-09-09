@@ -33,9 +33,9 @@
 </head>
 <body>
     <div id="app">
-        <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+        <header id="header" class="fixed-top d-flex align-items-center header-transparen bg-dark">
             <div class="container d-flex align-items-center">
-        
+         
               <div class="logo mr-auto">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{-- {{ config('app.name', 'Treyos Logo') }} --}}

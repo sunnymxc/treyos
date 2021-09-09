@@ -30,7 +30,7 @@
 	              			</div>
             			</div>
           
-            			<h2 class="mt-3 mb-3">Movement</h2>
+            			<h3 class="mt-3 mb-3">Movement</h3>
             			<h5 class="text-black">From</h5>
             			<div class="form-row">
 				            <div class="form-group col-md-9">

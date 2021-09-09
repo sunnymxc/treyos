@@ -51,7 +51,9 @@
                   <li><a href="#about">About</a></li>
                   <li><a href="#details">Services</a></li>
                   <li><a href="#features">Features</a></li>
-                  <li><a class="" href="#agents">Become an Agent</a></li>
+                  <li><a class="" href="/agent">Become an Agent</a></li>
+                  <li><a class="" href="/driver">Become a Driver</a></li>
+
                   
                    <!-- Authentication Links -->
                    @guest
@@ -119,7 +121,9 @@
     <script src="{{ asset('vendor/counterup/counterup.min.js') }}"></script>
     <script src="{{ asset('vendor/owl.carousel/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('vendor/aos/aos.js') }}"></script>  
+    <script src="{{ asset('js/form-upload.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>
+
 
 </body>
 
