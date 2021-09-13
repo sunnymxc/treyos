@@ -51,7 +51,9 @@
 
       <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" data-aos="fade-left">
         <h3>Everything You need to Know About Treyos</h3>
-        <p>Esse voluptas cumque vel exercitationem. Reiciendis est hic accusamus. Non ipsam et sed minima temporibus laudantium. Soluta voluptate sed facere corporis dolores excepturi. Libero laboriosam sint et id nulla tenetur. Suscipit aut voluptate.</p>
+        <p>TREYOS is a moving company  committed to delivering exceptional moving journeys. We do this by providing moving services of unrivalled quality, with each one expertly designed to make your home and office relocation as stress free as possible.
+        </p>
+         <p> Our services includes, home relocation, Office relocation and Movement of general goods (Hualage).</p>
 
         {{-- <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
           <div class="icon"><i class="bx bx-fingerprint"></i></div>
@@ -86,18 +88,40 @@
 
     <div class="row content">
       <div class="col-md-4" data-aos="fade-right">
-        <img src="{{ asset('img/truck3.jpg') }}" class="img-fluid ht-100" alt="">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="{{ asset('img/truck3.jpg') }}" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="{{ asset('img/tr3.jpg') }}" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="{{ asset('img/tr5.jpg') }}" alt="Third slide">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
       </div>
-      <div class="col-md-8 pt-4" data-aos="fade-up">
+      <div class="col-md-8" data-aos="fade-up">
         <h3>Home Relocation</h3>
-        <p class="font-italic">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua.
+        <p class="">
+          There is joy and feeling of satisfaction when you finally find that your dream home or dream office. You will agree with us that the joy is unending. 
+        </p>
+        <p>
+          As long as the urge to relocate from your current location persists, there is a little problem that comes with it. The stress of packing up and gathering your properties, getting a van or a truck that will help convey them and then the stress of unpacking and rearranging your properties. This, after some taught might bring about delay in your expected relocation date and time. We have personally been in this situation several times and that motivated the TREYOS team to come up with this solution.
+        </p>
+        <p>
+          We are dedicated to bring you the best relocation service, ensuring safety, fast, timely, comfortable and stress-free relocation service.
         </p>
       
-        <p>
-          Voluptas nisi in quia excepturi nihil voluptas nam et ut. Expedita omnis eum consequatur non. Sed in asperiores aut repellendus. Error quisquam ab maiores. Quibusdam sit in officia
-        </p>
         <a href="{{ url('booking') }}" class="btn btn-success mt-3 px-4">Book Us</a>
 
       </div>
@@ -105,22 +129,37 @@
 
     <div class="row content">
       <div class="col-md-4 order-1 order-md-2" data-aos="fade-left">
-        <img src="{{ asset('img/truck1.jpg') }}" class="img-fluid" alt="">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="{{ asset('img/truck1.jpg') }}" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="{{ asset('img/truck3.jpg') }}" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="{{ asset('img/truck11.jpg') }}" alt="Third slide">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
       </div>
       <div class="col-md-8 pt-5 order-2 order-md-1" data-aos="fade-up">
         <h3>Office Relocation</h3>
-        <p class="font-italic">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua.
+        <p class="">
+          Moving your business takes planning and preparation to ensure a smooth transition for your team, customers, and your business. Minimising disruption and downtime is key. The right preparation can help your business' move go smoothly and successfully.
         </p>
         <p>
-          Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum
+          At  TREYOS, We take  time to listen to you and your objectives, discover your individual needs, and work closely with you to plan the best move possible for your business.
         </p>
-        <p>
-          Inventore id enim dolor dicta qui et magni molestiae. Mollitia optio officia illum ut cupiditate eos autem. Soluta dolorum repellendus repellat amet autem rerum illum in. Quibusdam occaecati est nisi esse. Saepe aut dignissimos distinctio id enim.
-        </p>
+       
         <a href="{{ url('booking') }}" class="btn btn-success mt-3 px-4">Book Us</a>
 
       </div>
@@ -128,18 +167,34 @@
 
     <div class="row content">
       <div class="col-md-4" data-aos="fade-right">
-        <img src="{{ asset('img/truck4.jpg') }}" class="img-fluid" alt="">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="{{ asset('img/tr1.jpg') }}" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="{{ asset('img/truck3.jpeg') }}" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="{{ asset('img/truck5.jpg') }}" alt="Third slide">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
       </div>
       <div class="col-md-8 pt-5" data-aos="fade-up">
         <h3>Movement of general goods</h3>
-        <p>Cupiditate placeat cupiditate placeat est ipsam culpa. Delectus quia minima quod. Sunt saepe odit aut quia voluptatem hic voluptas dolor doloremque.</p>
-        
         <p>
-          Qui consequatur temporibus. Enim et corporis sit sunt harum praesentium suscipit ut voluptatem. Et nihil magni debitis consequatur est.
+          Treyos connects clients to companies who has the capacity to move any load or items across length and width of the country.
         </p>
-        <p>
-          Suscipit enim et. Ut optio esse quidem quam reiciendis esse odit excepturi. Vel dolores rerum soluta explicabo vel fugiat eum non.
-        </p>
+       
         <a href="{{ url('booking') }}" class="btn btn-success mt-3 px-4">Book Us</a>
 
       </div>
@@ -234,7 +289,7 @@
       </div>
     </div> --}}
 
-    <div class="col-xl-5 col-lg-6 video-box d-md-flex justify-content-center align-items-stretch d-block d-md-none" data-aos="fade-right">
+    <div class="col-xl-5 col-lg-6 video-box d-md-flex justify-content-center align-items-stretch d-block d-md-none d-lg-none d-xl-none" data-aos="fade-right">
       <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
     </div>
 
@@ -279,76 +334,7 @@
 <!-- End Counts Section -->
 
 
-  <!-- ======= Agent Section ======= -->
-  {{-- <section id="agents" class="pricing">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 h-100">
-          <div class="section-title" data-aos="fade-up">
-            <h2>Agent</h2>
-            <p>Become a Treyos Agent</p>
-          </div>
-    
-          <div class="row" data-aos="fade-left">
-    
-            
-            <div class="col-lg-10 col-md-12 mt-4 mt-md-0 mx-auto">
-              <div class="box featured h-100" data-aos="zoom-in" data-aos-delay="200">
-                <h3>Why you should be our agent</h3>
-                <h4>Earn <sup></sup>10%<span> / Movement</span></h4>
-                <ul>
-                  <li>Aida dere</li>
-                  <li>Nec feugiat nisl</li>
-                  <li>Nulla at volutpat dola</li>
-                  <li>Pharetra massa</li>
-                </ul>
-                <div class="btn-wrap">
-                  <a href="{{ route('register') }}" class="btn-buy">Register Now</a>
-                </div>
-              </div>
-            </div>
-    
-           
-          </div>
-    
-        </div>
-        <div class="col-md-6 mt-3 mt-md-0">
-          <div class="section-title" data-aos="fade-up">
-            <h2>Driver</h2>
-            <p>Become a Treyos Driver</p>
-          </div>
-    
-          <div class="row" data-aos="fade-left">
-    
-            
-            <div class="col-lg-10 col-md-12 mt-4 mt-md-0 mx-auto">
-              <div class="box featured" data-aos="zoom-in" data-aos-delay="200">
-                <h3>Do you have what it takes to become a Treyos Driver?</h3>
-                <ul class=" pb-md-4">
-                  <li>Aida dere</li>
-                  <li>Nec feugiat nisl</li>
-                  <li>Nulla at volutpat dola</li>
-                  <li>Pharetra massa</li>
-                  <li>Pharetra massa</li>
-
-                </ul>
-                <div class="btn-wrap">
-                  <a href="{{ route('register') }}" class="btn-buy">Register Now</a>
-                </div>
-              </div>
-            </div>
-    
-           
-          </div>
-    
-        </div>
-      </div>
-
-     
-    </div>
-  </section> --}}
-  <!-- End Agents Section -->
-
+  
 </main>
 
 @endsection

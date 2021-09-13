@@ -12,8 +12,8 @@
               beside chicken republic, Jakande Gate,<br>
               isolo Ejigbo road, oke-afa Lagos
               <br><br>
-              <strong>Phone:</strong> +23480832902<br>
-              <strong>Email:</strong> info@treyos.com<br>
+              <strong>Phone:</strong> +2348168901738<br>
+              <strong>Email:</strong> support@treyos.com<br>
             </p>
             <div class="social-links mt-3">
               <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -36,7 +36,7 @@
 
         <div class="col-lg-4 col-md-6 footer-newsletter d-none d-md-block">
           <h4>Our Newsletter</h4>
-          <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+          <p>Enter your email to subscribe for our Newsletter and be updated on any changes to our services</p>
           <form action="{{ url('subscribe') }}" method="post">
             <input type="email" name="email" placeholder="email address"><input type="submit" value="Subscribe">
           </form>
