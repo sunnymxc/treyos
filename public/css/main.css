@@ -108,6 +108,9 @@ h1, h2, h3, h4, h5, h6 {
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
+  .img-height{
+    height: 8rem;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -126,7 +129,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header.header-scrolled {
-  background: rgba(1, 4, 136, 0.9);
+  background: rgb(66, 103, 178);
   height: 60px;
 }
 
@@ -405,7 +408,9 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero:before {
   content: "";
-  background: rgb(66, 103, 178);
+  /* background: rgb(66, 103, 178); */
+  background: #315a89;
+
   
   position: absolute;
   bottom: 0;
@@ -638,7 +643,7 @@ section {
   font-weight: 700;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
-  color: #010483;
+  color: rgb(66, 103, 178);
 }
 
 /*--------------------------------------------------------------
@@ -711,7 +716,7 @@ section {
 .about .icon-boxes h3 {
   font-size: 28px;
   font-weight: 700;
-  color: #010483;
+  color: rgb(66, 103, 178);
   margin-bottom: 15px;
 }
 
@@ -894,7 +899,7 @@ section {
 }
 
 .features .icon-box h3 a {
-  color: #010483;
+  color: rgb(66, 103, 178);
   transition: ease-in-out 0.3s;
 }
 
@@ -938,7 +943,7 @@ section {
   font-size: 36px;
   display: block;
   font-weight: 600;
-  color: #010483;
+  color: rgb(66, 103, 178);
 }
 
 .counts .count-box p {
@@ -958,7 +963,7 @@ section {
 .details .content h3 {
   font-weight: 600;
   font-size: 26px;
-  color: #010483;
+  color: rgb(66, 103, 178);
 }
 
 .details .content ul {
@@ -1400,7 +1405,7 @@ section {
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #010483;
+  color: rgb(66, 103, 178);
 }
 
 .contact .info p {
@@ -1527,7 +1532,7 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #010351;
+  background: #315a89;
   padding: 0 0 30px 0;
   color: #fff;
   font-size: 14px;
@@ -1539,7 +1544,7 @@ section {
 
 #footer .footer-top .footer-info {
   margin-bottom: 15px;
-  background: #010246;
+  background: #3273be;
   color: #fff;
   border-top: 4px solid #1acc8d;
   text-align: center;
@@ -1740,4 +1745,7 @@ a.nav-link{
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
     padding: 0.2rem;
+  }
+  .img-height{
+    height: 22rem;
   }
