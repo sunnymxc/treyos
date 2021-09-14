@@ -91,13 +91,13 @@
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="d-block w-100" src="{{ asset('img/truck3.jpg') }}" alt="First slide">
+              <img class="d-block w-100 img-height" src="{{ asset('img/truck3.jpg') }}" alt="First slide">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="{{ asset('img/tr3.jpg') }}" alt="Second slide">
+              <img class="d-block w-100 img-height" src="{{ asset('img/tr3.jpg') }}" alt="Second slide">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="{{ asset('img/tr5.jpg') }}" alt="Third slide">
+              <img class="d-block w-100 img-height" src="{{ asset('img/tr5.jpg') }}" alt="Third slide">
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -111,7 +111,7 @@
         </div>
       </div>
       <div class="col-md-8" data-aos="fade-up">
-        <h3>Home Relocation</h3>
+        <h3 class="pt-4 pt-md-0">Home Relocation</h3>
         <p class="">
           There is joy and feeling of satisfaction when you finally find that your dream home or dream office. You will agree with us that the joy is unending. 
         </p>
@@ -132,13 +132,13 @@
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="d-block w-100" src="{{ asset('img/truck1.jpg') }}" alt="First slide">
+              <img class="d-block w-100 img-height" src="{{ asset('img/truck1.jpg') }}" alt="First slide">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="{{ asset('img/truck3.jpg') }}" alt="Second slide">
+              <img class="d-block w-100 img-height" src="{{ asset('img/truck3.jpg') }}" alt="Second slide">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="{{ asset('img/truck11.jpg') }}" alt="Third slide">
+              <img class="d-block w-100 img-height" src="{{ asset('img/truck11.jpg') }}" alt="Third slide">
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -170,13 +170,13 @@
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="d-block w-100" src="{{ asset('img/tr1.jpg') }}" alt="First slide">
+              <img class="d-block w-100 img-height" src="{{ asset('img/tr1.jpg') }}" alt="First slide">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="{{ asset('img/truck3.jpeg') }}" alt="Second slide">
+              <img class="d-block w-100 img-height" src="{{ asset('img/truck3.jpeg') }}" alt="Second slide">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="{{ asset('img/truck5.jpg') }}" alt="Third slide">
+              <img class="d-block w-100 img-height" src="{{ asset('img/truck5.jpg') }}" alt="Third slide">
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
