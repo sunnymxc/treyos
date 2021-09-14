@@ -8,6 +8,7 @@
 
 <section class="book" id="hero">
 	<div class="container">
+		@include('flash-message')
 		<form method="post" action="{{ route('booking.store') }}">
 			@csrf
     	<div class="row my-5">

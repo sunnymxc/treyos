@@ -51,8 +51,8 @@
                   <li><a href="#about">About</a></li>
                   <li><a href="#details">Services</a></li>
                   <li><a href="#features">Features</a></li>
-                  <li><a class="" href="/agent">Become an Agent</a></li>
-                  <li><a class="" href="/driver">Become a Driver</a></li>
+                  <li><a class="" href="{{ url('agent') }}">Become an Agent</a></li>
+                  <li><a class="" href="{{ url('driver') }}">Become a Driver</a></li>
 
                   
                    <!-- Authentication Links -->

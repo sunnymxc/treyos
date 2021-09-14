@@ -45,10 +45,22 @@ class BookingController extends Controller
       	$booking->state_from = $request->input('state_from');
       	$booking->address_from = $request->input('address_from');
        	$booking->vehicle = $request->input('vehicle');
+
+        #Store Unique Order/Booking Number
+        $unique_no = Booking::orderBy('id', 'DESC')->pluck('id')->first();
+        if($unique_no == null or $unique_no == ""){
+            #If Table is Empty
+            $unique_no = 100000;
+        } else {
+            #If Table has Already some Data
+            $unique_no = $unique_no + 1;
+        }
+
+        $booking->booking_no = 'TS'.$unique_no;
        	
        	$booking->save();
        	
-       	return back()->withInput();
+       	return back()->with('success', 'Booking placed successfully!');
     }
 
     /**
