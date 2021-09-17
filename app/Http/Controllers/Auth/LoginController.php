@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
@@ -27,20 +28,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo;
-    
-    public function redirectTo()
-    {
-	    if (Auth::user()->role == 92782) {
-	    	return 'admin/dashboard';  // admin dashboard path
-	  	} elseif (Auth::user()->role == 2) {
-	    	return 'agent/dashboard';  // agent dashboard path
-	  	} elseif (Auth::user()->role == 3) { // driver dashboard path
-	  		return 'driver/dashboard';
-	  	} else {
-	  		abort(404);
-	  	}
-	}
+    protected $redirectTo = RouteServiceProvider::HOME;
 
     /**
      * Create a new controller instance.
@@ -50,6 +38,66 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+        $this->middleware('guest:admin')->except('logout');
+        $this->middleware('guest:agent')->except('logout');
+        $this->middleware('guest:driver')->except('logout');      
+    }
+
+    public function showAdminLoginForm()
+    {
+        return view('auth.login', ['url' => 'admin']);
+    }
+
+    public function adminLogin(Request $request)
+    {
+        $this->validate($request, [
+            'email'   => 'required|email',
+            'password' => 'required|min:6'
+        ]);
+
+        if (Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password], $request->get('remember'))) {
+
+            return redirect()->intended('/admin');
+        }
+        return back()->withInput($request->only('email', 'remember'));
+    }
+
+    public function showAgentLoginForm()
+    {
+        return view('auth.login', ['url' => 'agent']);
+    }
+
+    public function agentLogin(Request $request)
+    {
+        $this->validate($request, [
+            'email'   => 'required|email',
+            'password' => 'required|min:6'
+        ]);
+
+        if (Auth::guard('agent')->attempt(['email' => $request->email, 'password' => $request->password], $request->get('remember'))) {
+
+            return redirect()->intended('/agent');
+        }
+        return back()->withInput($request->only('email', 'remember'));
+    }
+
+    public function showDriverLoginForm()
+    {
+        return view('auth.login', ['url' => 'driver']);
+    }
+
+    public function driverLogin(Request $request)
+    {
+        $this->validate($request, [
+            'email'   => 'required|email',
+            'password' => 'required|min:6'
+        ]);
+
+        if (Auth::guard('driver')->attempt(['email' => $request->email, 'password' => $request->password], $request->get('remember'))) {
+
+            return redirect()->intended('/driver');
+        }
+        return back()->withInput($request->only('email', 'remember'));
     }
     
     public function logout() 

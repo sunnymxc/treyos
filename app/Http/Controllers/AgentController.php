@@ -41,13 +41,10 @@ class AgentController extends Controller
       	$agent->name = $request->input('name');
       	$agent->email = $request->input('email');
       	$agent->phone = $request->input('phone');
-      	$agent->state_to = $request->input('state_to');
-      	$agent->address_to = $request->input('address_to');
-      	$agent->state_from = $request->input('state_from');
-      	$agent->address_from = $request->input('address_from');
-       	$agent->vehicle = $request->input('vehicle');
+      	$agent->address = $request->input('address');
+        $agent->selfie_path = $request->file('selfie_path');
 
-        #Store Unique Order/agent Number
+        #Store Unique agent Number
         $unique_no = Agent::orderBy('id', 'DESC')->pluck('id')->first();
         if($unique_no == null or $unique_no == ""){
             #If Table is Empty
@@ -64,6 +61,19 @@ class AgentController extends Controller
        	return back()->with('success','agent number placed successfully!');
     }
 
+    public function uploadSelfie(Request $request, selfie_path $selfie) {
+        storage::put(
+            "agents/{$selfie->id}",
+            file_get_contents($request->file('selfie_path')->getRealPath())
+        );       
+    }
+
+    public function uploadId(Request $request, id_path $id) {
+        storage::put(
+            "agents/{$id->id}",
+            file_get_contents($request->file('id_path')->getRealPath())
+        );
+    }
     /**
      * Display the specified resource.
      *

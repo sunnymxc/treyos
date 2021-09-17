@@ -9,9 +9,19 @@
             <x-jet-authentication-card-logo />
         </x-slot>
         
-        <form method="POST" action="{{ route('register') }}" x-data="{role: 2}">
-            @csrf
+        <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header"> {{ isset($url) ? ucwords($url) : ""}} {{ __('Register') }}</div>
 
+                    <div class="card-body">
+                        @isset($url)
+                        <form method="POST" action='{{ url("register/$url") }}' aria-label="{{ __('Register') }}">
+                        @else
+                        <form method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
+                        @endisset
+                            @csrf
             <div>
                 <x-jet-label for="first_name" value="{{ __('First Name') }}" />
                 <x-jet-input id="first_name" class="block mt-1 w-full" type="text" name="first_name" :value="old('first_name')" required autofocus autocomplete="first_name" />
@@ -71,6 +81,7 @@
                     {{ __('Register') }}
                 </x-jet-button>
             </div>
+             </div>
         </form>
     </x-jet-authentication-card>
 </x-guest-layout>

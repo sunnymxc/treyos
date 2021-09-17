@@ -5,9 +5,13 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
+use App\Models\Admin;
+use App\Models\Agent;
+use App\Models\Driver;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -38,7 +42,29 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware('guest')->except('logout');
+        $this->middleware('guest:admin')->except('logout');
+        $this->middleware('guest:agent')->except('logout');
+        $this->middleware('guest:driver')->except('logout');
+    }
+
+    /**
+     * Method to return the registration pages for different users
+     */
+
+    public function showAdminRegisterForm()
+    {
+        return view('auth.register', ['url' => 'admin']);
+    }
+
+    public function showAgentRegisterForm()
+    {
+        return view('auth.register', ['url' => 'agent']);
+    }
+
+    public function showDriverRegisterForm()
+    {
+        return view('auth.register', ['url' => 'driver']);
     }
 
     /**
@@ -52,7 +78,6 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'first_name' => ['required', 'string', 'max:255'],
             'last_name' => ['required', 'string', 'max:255'],
-            'role' => ['required', 'integer',],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -69,9 +94,41 @@ class RegisterController extends Controller
         return User::create([
         	'first_name' => $data['first_name'],
             'last_name' => $data['last_name'],
-            'role' => $data['role'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+    }
+
+    protected function createAdmin(Request $request)
+    {
+        $this->validator($request->all())->validate();
+        $admin = Admin::create([
+            'name' => $request['name'],
+            'email' => $request['email'],
+            'password' => Hash::make($request['password']),
+        ]);
+        return redirect()->intended('login/admin');
+    }
+
+    protected function createAgent(Request $request)
+    {
+        $this->validator($request->all())->validate();
+        $agent = Agent::create([
+            'name' => $request['name'],
+            'email' => $request['email'],
+            'password' => Hash::make($request['password']),
+        ]);
+        return redirect()->intended('login/agent');
+    }
+
+    protected function createDriver(Request $request)
+    {
+        $this->validator($request->all())->validate();
+        $driver = Driver::create([
+            'name' => $request['name'],
+            'email' => $request['email'],
+            'password' => Hash::make($request['password']),
+        ]);
+        return redirect()->intended('login/driver');
     }
 }
