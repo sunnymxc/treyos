@@ -114,80 +114,63 @@
 										<form role="form" action="index.html" class="login-box">
 												<div class="tab-content" id="main_form">
 														<div class="tab-pane active" role="tabpanel" id="step1">
-																<h4 class="text-center mb-4">Step 1</h4>
-																<div class="row">
-																		<div class="col-md-6">
-																				<div class="form-group">
-																						<label>First and Last Name *</label> 
-																						<input class="form-control" type="text" name="name" placeholder=""> 
-																				</div>
-																		</div>
-																		<div class="col-md-6">
-																				<div class="form-group">
-																						<label>Phone Number  *</label> 
-																						<input class="form-control" type="text" name="name" placeholder=""> 
-																				</div>
-																		</div>
-																		<div class="col-md-6">
-																				<div class="form-group">
-																						<label>Email Address *</label> 
-																						<input class="form-control" type="email" name="name" placeholder=""> 
-																				</div>
-																		</div>
-																		
-																		<div class="col-md-6">
-																				<div class="form-group">
-																						<label>Password *</label> 
-																						<input class="form-control" type="password" name="name" placeholder=""> 
-																				</div>
-																		</div>
-																		
-																		
-																</div>
+																<h4 class="text-center mb-4">Personal Details</h4>
+																<div class="form-row">
+																	<div class="form-group col-md-12">
+																		<label for="name" class="text-black">Full Name</label>
+																		<input type="text" class="form-control" id="name" name="name" required autofocus autocomplete="name">
+																	</div>              			
+																	<div class="form-group col-md-6">
+																		<label for="email" class="text-black">Email</label>
+																		<input type="email" class="form-control" id="email" name="email" required autofocus autocomplete="email">
+																	</div>              
+																	<div class="form-group col-md-6 mb-1">
+																			<label for="phone" class="text-black">Phone Number</label>
+																		<input type="text" class="form-control" id="phone" name="phone" required autofocus autocomplete="email">
+																	</div>
+															</div>
+          
 																<ul class="list-inline pull-right">
 																		<li><button type="button" class="default-btn next-step btn-success">Continue to next step</button></li>
 																</ul>
 														</div>
 														<div class="tab-pane" role="tabpanel" id="step2">
-																<h4 class="text-center mb-4">Step 2</h4>
-																<div class="row">
-																<div class="col-md-6">
-																		<div class="form-group">
-																				<label>Address 1 *</label> 
-																				<input class="form-control" type="text" name="name" placeholder=""> 
+																<h4 class="text-center mb-4">Movement</h4>
+																<h5 class="text-info">From</h5>
+																	<div class="form-row">
+																		<div class="form-group col-md-9">
+																			<label for="address_from" class="text-black">Address</label>
+																				<input type="text" class="form-control" id="address_from" placeholder="" name="address_from" required autofocus autocomplete="address_from">
 																		</div>
-																</div>
-																
-																<div class="col-md-6">
-																		<div class="form-group">
-																				<label>City / Town *</label> 
-																				<input class="form-control" type="text" name="name" placeholder=""> 
+																		<div class="form-group col-md-3">
+																				<label for="state_from" class="text-black">State</label>
+																				<input type="text" class="form-control" id="state_from" placeholder="" name="state_from" required autofocus autocomplete="state_from">
 																		</div>
-																</div>
-																<div class="col-md-6">
-																		<div class="form-group">
-																				<label>Country *</label> 
-																				<select name="country" class="form-control" id="country">
-																						<option value="NG" selected="selected">Nigeria</option>
-																						<option value="NU">Niue</option>
-																						<option value="NF">Norfolk Island</option>
-																						<option value="KP">North Korea</option>
-																						<option value="MP">Northern Mariana Islands</option>
-																						<option value="NO">Norway</option>
+																	</div>
+																	
+																	<h5 class="text-info mt-3">To</h5>
+																	<div class="form-row">
+																		<div class="form-group col-md-9">
+																				<label for="address_to" class="text-black">Address</label>
+																				<input type="text" class="form-control" id="address_to" placeholder="" name="address_to">
+																		</div>
+																		<div class="form-group col-md-3">
+																				<label for="state_to" class="text-black">State</label>
+																				<input type="text" class="form-control" id="state_to" placeholder="" name="state_to">
+																		</div>
+																	</div>
+																	<div class="form-row">
+																		<div class="form-group col-md-9">
+																				<label for="vehicle" class="text-black">Vehicle Type</label>
+																				<select name="vehicle" id="inputState" class="form-control">
+																						<option selected>Choose Vehicle</option>
+																						<option>Truck</option>
+																						<option>Van</option>
+																						<option>Bus</option>
+																						<option>Car</option>
 																				</select>
-																		</div>
+																			</div>
 																</div>
-																
-																
-																
-																<div class="col-md-6">
-																		<div class="form-group">
-																				<label>Registration No.</label> 
-																				<input class="form-control" type="text" name="name" placeholder=""> 
-																		</div>
-																</div>
-															 </div>
-																
 																
 																<ul class="list-inline pull-right">
 																		<li><button type="button" class="default-btn prev-step btn-secondary">Back</button></li>
@@ -196,48 +179,59 @@
 																</ul>
 														</div>
 														<div class="tab-pane" role="tabpanel" id="step3">
-																<h4 class="text-center mb-4">Step 3</h4>
-																 <div class="row">
-																<div class="col-md-6">
-																		<div class="form-group">
-																				<label>Account Name *</label> 
-																				<input class="form-control" type="text" name="name" placeholder=""> 
-																		</div>
+																<h4 class="text-center mb-4">Others</h4>
+															
+																<div class="form-row">
+																	<div class="form-group col-md-12">
+																		<label for="name" class="text-black">Apartment Size</label>
+																		<select name="vehicle" id="inputSize" class="form-control">
+																			<option selected>select size</option>
+																			<option>1 room</option>
+																			<option>2 rooms</option>
+																			<option>3 rooms</option>
+																			<option>4 rooms</option>
+																	</select>
+																	</div>              			
+																	<div class="form-group col-md-6">
+																		<label for="date" class="text-black">Date</label>
+																		<input type="date" class="form-control" id="date" name="date" required autofocus autocomplete="email">
+																	</div>              
+																	<div class="form-group col-md-6 mb-1">
+																			<label for="time" class="text-black">Time</label>
+																		<input type="time" class="form-control" id="time" name="time" required autofocus autocomplete="email">
+																	</div>
+															</div>
+          
+															<p class="text-danger">for haulage</p>
+															<div class="form-row">
+																<div class="form-group col-md-6">
+																	<label for="date" class="text-black">What are you moving</label>
+																	<input type="text" class="form-control" id="item" name="" required autofocus autocomplete="email">
 																</div>
-																<div class="col-md-6">
-																		<div class="form-group">
-																				<label>Demo</label> 
-																				<input class="form-control" type="text" name="name" placeholder=""> 
-																		</div>
+																<div class="form-group col-md-6">
+																	<label for="name" class="text-black">Item Size</label>
+																	<select name="vehicle" id="inputSize" class="form-control">
+																		<option selected>select size</option>
+																		<option>5-10 tons</option>
+																		<option>10-20 tons</option>
+																		<option>20-30 tons</option>
+																		<option>40-50 tons</option>
+																		<option>50-60 tons</option>
+																		<option>60-70 tons</option>
+																		<option>70-80 tons</option>
+																		<option>80-90 tons</option>
+																		<option>90-100 tons</option>
+																</select>
+																</div>              			
+																<div class="form-group col-md-6">
+																	<label for="date" class="text-black">Date</label>
+																	<input type="date" class="form-control" id="date" name="date" required autofocus autocomplete="email">
+																</div>              
+																<div class="form-group col-md-6 mb-1">
+																		<label for="time" class="text-black">Time</label>
+																	<input type="time" class="form-control" id="time" name="time" required autofocus autocomplete="email">
 																</div>
-																<div class="col-md-6">
-																		<div class="form-group">
-																				<label>Inout</label> 
-																				<input class="form-control" type="text" name="name" placeholder=""> 
-																		</div>
-																</div>
-																<div class="col-md-6">
-																		<div class="form-group">
-																				<label>Information</label> 
-																				<div class="custom-file">
-																					<input type="file" class="custom-file-input" id="customFile">
-																					<label class="custom-file-label" for="customFile">Select file</label>
-																				</div>
-																		</div>
-																</div>
-																<div class="col-md-6">
-																		<div class="form-group">
-																				<label>Number *</label> 
-																				<input class="form-control" type="text" name="name" placeholder=""> 
-																		</div>
-																</div>
-																<div class="col-md-6">
-																		<div class="form-group">
-																				<label>Input Number</label> 
-																				<input class="form-control" type="text" name="name" placeholder=""> 
-																		</div>
-																</div>
-																	 </div>
+														</div>
 																	 <ul class="list-inline pull-right">
 																		<li><button type="button" class="default-btn prev-step btn-secondary">Back</button></li>
 																		<li><button type="button" class="default-btn next-step btn-success">Finish</button></li>
