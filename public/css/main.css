@@ -129,7 +129,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header.header-scrolled {
-  background: rgb(66, 103, 178);
+background-color: #315a89;
   height: 60px;
 }
 
@@ -149,7 +149,7 @@ h1, h2, h3, h4, h5, h6 {
 #header .logo img {
   padding: 0;
   margin: 0;
-  max-height: 40px;
+  max-height: 50px;
 }
 
 @media (max-width: 992px) {
@@ -505,7 +505,14 @@ height: 70px;
 
 @media (max-width: 575px) {
   #hero .hero-img img {
-    width: 80%;
+    width: 100%;
+  }
+  #header .logo img{
+    max-height: 100px;
+  }
+  #header.header-scrolled{
+    background-color: #315a89;
+    height: 100px;
   }
 }
 
