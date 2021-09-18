@@ -514,6 +514,18 @@ height: 70px;
     background-color: #315a89;
     height: 100px;
   }
+  #herro:before {
+    content: "";
+    background: #315a89;
+  height: 85px;
+    
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  
 }
 
 @-webkit-keyframes up-down {
@@ -2087,3 +2099,9 @@ a.nav-link{
       }
     }
     
+    .tx-18{
+      font-size: 18px;
+    }
+    .pad-top{
+      padding-top: 3rem;
+    }
