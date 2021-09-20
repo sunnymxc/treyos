@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\BookingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +25,7 @@ Route::get('welcome', function () {
 
 Auth::routes();
 
-Route::get('booking', BookingController::class);
+Route::resource('booking', BookingController::class);
 
 
 
