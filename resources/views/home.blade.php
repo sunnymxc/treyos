@@ -122,7 +122,7 @@
           We are dedicated to bring you the best relocation service, ensuring safety, fast, timely, comfortable and stress-free relocation service.
         </p>
       
-        <a href="{{ url('booking') }}" class="btn btn-success mt-3 px-4">Book Us</a>
+        <a href="{{ url('booking/home') }}" class="btn btn-success mt-3 px-4">Book Us</a>
 
       </div>
     </div>
@@ -160,7 +160,7 @@
           At  TREYOS, We take  time to listen to you and your objectives, discover your individual needs, and work closely with you to plan the best move possible for your business.
         </p>
        
-        <a href="{{ url('booking') }}" class="btn btn-success mt-3 px-4">Book Us</a>
+        <a href="{{ url('booking/office') }}" class="btn btn-success mt-3 px-4">Book Us</a>
 
       </div>
     </div>
@@ -195,7 +195,7 @@
           Treyos connects clients to companies who has the capacity to move any load or items across length and width of the country.
         </p>
        
-        <a href="{{ url('booking') }}" class="btn btn-success mt-3 px-4">Book Us</a>
+        <a href="{{ url('booking/haulage') }}" class="btn btn-success mt-3 px-4">Book Us</a>
 
       </div>
     </div>

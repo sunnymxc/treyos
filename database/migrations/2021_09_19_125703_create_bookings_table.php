@@ -14,8 +14,8 @@ class CreateBookingsTable extends Migration
     public function up()
     {
         Schema::create('bookings', function (Blueprint $table) {
-            $table->id();   
-            $table->string('booking_no');
+            $table->id();
+            $table->string('type');  
             $table->string('name');
             $table->string('email');
             $table->string('phone');
@@ -23,7 +23,12 @@ class CreateBookingsTable extends Migration
 			$table->text('address_to');			
 			$table->string('state_from');
 			$table->text('address_from');
-			$table->string('vehicle');                        
+			$table->string('vehicle');              
+            $table->date('date');
+            $table->time('time');
+            $table->string('apartment')->nullable();
+            $table->string('description')->nullable();
+            $table->string('weight')->nullable();                     
             $table->timestamps();
         });
     }

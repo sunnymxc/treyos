@@ -15,7 +15,7 @@ class PlatformScreen extends Screen
      *
      * @var string
      */
-    public $name = 'Get Started';
+    public $name = 'Welcome';
 
     /**
      * Display header description.

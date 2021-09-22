@@ -4,27 +4,23 @@
 
 @section('content')
 
-
-
 <section class="book" id="hero">
-	
-		
-          				
-            			
-					            </div>
-					        </div>					            
-			           </div>
-				</div>
-			</div>
-		</div>
-	</div>  
-
-	<section class="signup-step-container">
-		<div class="container col-md-8 mx-auto">
-				<div class="row d-flex justify-content-center card card-body shadow p-5 border-0">
-						<div class="col">
+	<div class="container col-md-8 mx-auto">
+		<div class="card">
+            <div class="card-header" style="text-align:center"> {{ isset($url) ? ucwords($url) : ""}} {{ __('Relocation Booking') }}</div>
+				<div class="card-body">
+					
+                    @isset($url)
+                    <form method="POST" action='{{ url("booking/$url") }}' aria-label="{{ __('Booking') }}">
+                    @else
+                    <form method="POST" action="{{ url('booking') }}" aria-label="{{ __('Booking') }}">
+                    @endisset
+                        @csrf
+						@include('flash-message') 
+						<div class="row d-flex justify-content-center card card-body shadow p-5 border-0">
+							<div class="col">
 								<div class="wizard">
-										<div class="wizard-inner">
+									<div class="wizard-inner">
 												<div class="connecting-line"></div>
 												<ul class="nav nav-tabs" role="tablist">
 														<li role="presentation" class="active">
@@ -39,12 +35,20 @@
 														
 												</ul>
 										</div>
-		
-										<form role="form" method="post" action="{{ route('booking.store') }}" class="login-box">
+               
+
 												<div class="tab-content" id="main_form">
 														<div class="tab-pane active" role="tabpanel" id="step1">
 																<h4 class="text-center mb-4">Personal Details</h4>
 																<div class="form-row">
+																	@if ($url === 'home')
+																	<input name="type" type="hidden" value="Home Relocation">
+																	@elseif ($url == 'office')
+																	<input name="type" type="hidden" value="Office Relocation">	
+																	@elseif ($url == 'haulage')
+																	<input name="type" type="hidden" value="Haulage">
+																	@endif
+
 																	<div class="form-group col-md-12">
 																		<label for="name" class="text-black">Full Name</label>
 																		<input type="text" class="form-control" id="name" name="name" required autofocus autocomplete="name">
@@ -55,7 +59,7 @@
 																	</div>              
 																	<div class="form-group col-md-6 mb-1">
 																			<label for="phone" class="text-black">Phone Number</label>
-																		<input type="text" class="form-control" id="phone" name="phone" required autofocus autocomplete="email">
+																		<input type="text" class="form-control" id="phone" name="phone" required autofocus autocomplete="phone">
 																	</div>
 															</div>
           
@@ -130,7 +134,8 @@
 																		<input type="time" class="form-control" id="time" name="time" required autofocus autocomplete="email">
 																	</div>
 															</div>
-          
+
+															@if($url === 'haulage')
 															<p class="text-danger">for haulage</p>
 															<div class="form-row">
 																<div class="form-group col-md-6">
@@ -151,11 +156,20 @@
 																		<option>80-90 tons</option>
 																		<option>90-100 tons</option>
 																</select>
-																</div>              								
+																</div>              			
+																<div class="form-group col-md-6">
+																	<label for="date" class="text-black">Date</label>
+																	<input type="date" class="form-control" id="date" name="date" required autofocus autocomplete="email">
+																</div>              
+																<div class="form-group col-md-6 mb-1">
+																		<label for="time" class="text-black">Time</label>
+																	<input type="time" class="form-control" id="time" name="time" required autofocus autocomplete="email">
+																</div>
+																@endif
 														</div>
 																	 <ul class="list-inline pull-right">
 																		<li><button type="button" class="default-btn prev-step btn-secondary">Back</button></li>
-																		<li><button type="submit" class="default-btn next-step btn-success">Finish</button></li>
+																		<li><button type="button" class="default-btn next-step btn-success">Finish</button></li>
 																</ul>
 														</div>
 													
@@ -167,5 +181,7 @@
 						</div>
 				</div>
 		</div>
-</section> 
+</section>
+</section>  
+
 @endsection

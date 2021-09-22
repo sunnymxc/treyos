@@ -25,7 +25,8 @@ Route::get('welcome', function () {
 
 Auth::routes();
 
-Route::resource('booking', BookingController::class);
-
+Route::get('/booking/haulage', [BookingController::class, 'showGoodsForm']);
+Route::get('/booking/home', [BookingController::class, 'showHomeForm']);
+Route::get('/booking/office', [BookingController::class, 'showOfficeForm']);
 
 

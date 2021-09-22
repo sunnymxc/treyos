@@ -29,6 +29,39 @@ class BookingController extends Controller
     }
 
     /**
+     * Show Booking form for Haulage
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function showGoodsForm()
+    {
+        return view('booking', ['url' => 'haulage']);
+    }
+    
+    /**
+     * Show Booking form for Home Relocation
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function showHomeForm()
+    {
+        return view('booking', ['url' => 'home']);
+    }
+
+    /**
+     * Show Booking form for Office Relocation
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function showOfficeForm()
+    {
+        return view('booking', ['url' => 'office']);
+    }
+
+    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -45,6 +78,10 @@ class BookingController extends Controller
       	$booking->state_from = $request->input('state_from');
       	$booking->address_from = $request->input('address_from');
        	$booking->vehicle = $request->input('vehicle');
+        $booking->date = $request->input('date');
+        $booking->time = $request->input('time');
+       	$booking->description = $request->input('description');
+        $booking->weight = $request->input('weight');
        	
        	$booking->save();
        	

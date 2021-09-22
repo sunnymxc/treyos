@@ -18,6 +18,11 @@ use App\Orchid\Screens\User\UserProfileScreen;
 use Illuminate\Support\Facades\Route;
 use Tabuna\Breadcrumbs\Trail;
 
+// Mine
+use App\Orchid\Screens\BookingEditScreen;
+use App\Orchid\Screens\BookingListScreen;
+
+
 /*
 |--------------------------------------------------------------------------
 | Dashboard Routes
@@ -109,5 +114,7 @@ Route::screen('example-advanced', ExampleFieldsAdvancedScreen::class)->name('pla
 
 //Route::screen('idea', 'Idea::class','platform.screens.idea');
 
-// Route::screen('booking/{booking?}', BookingEditScreen::class)->name('platform.booking.edit');
-// Route::screen('booking', BookingListScreen::class)->name('platform.booking.list');
+Route::screen('booking/{booking?}', BookingEditScreen::class)
+    ->name('platform.booking.edit');
+Route::screen('bookings', BookingListScreen::class)
+    ->name('platform.booking.list');

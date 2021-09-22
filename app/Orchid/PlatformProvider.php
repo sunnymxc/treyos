@@ -36,8 +36,7 @@ class PlatformProvider extends OrchidServiceProvider
             
             Menu::make('Booking')
                 ->icon('book-open')
-                //->route('')
-                ,
+                ->route('platform.booking.list'),
 
             Menu::make('Community')
                 ->icon('code')
