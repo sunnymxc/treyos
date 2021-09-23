@@ -70,6 +70,7 @@ class BookingController extends Controller
     public function store(Request $request)
     {
         $booking = new booking();
+        $booking->type = $request->input('type');
       	$booking->name = $request->input('name');
       	$booking->email = $request->input('email');
       	$booking->phone = $request->input('phone');
@@ -80,6 +81,7 @@ class BookingController extends Controller
        	$booking->vehicle = $request->input('vehicle');
         $booking->date = $request->input('date');
         $booking->time = $request->input('time');
+        $booking->apartment = $request->input('apartment');
        	$booking->description = $request->input('description');
         $booking->weight = $request->input('weight');
        	
